@@ -15,7 +15,7 @@ A made this list for all FOSS web services I found on the internet
 
 ### NITTER - A Twitter front-end FOSS alternative
 
-[🌐](https://github.com/zedeus/nitter)
+[🌐 Source](https://github.com/zedeus/nitter)
 
 **List of instances**:
 
