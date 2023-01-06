@@ -13,3 +13,26 @@ A made this list for all FOSS web services I found on the internet
 ---
 
 _This list above will be update soon as I found more FOSS web services._
+
+<table>
+  <tr>
+    <th>Coluna 1</th>
+    <th>Coluna 2</th>
+    <th>Coluna 3</th>
+  </tr>
+  <tr>
+    <td>Linha 1</td>
+    <td>Linha 1</td>
+    <td>Linha 1</td>
+  </tr>
+  <tr>
+    <td>Linha 2</td>
+    <td>Linha 2</td>
+    <td>Linha 2</td>
+  </tr>
+  <tr>
+    <td>Linha 3</td>
+    <td>Linha 3</td>
+    <td>Linha 3</td>
+  </tr>
+</table>
