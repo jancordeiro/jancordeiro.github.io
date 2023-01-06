@@ -13,7 +13,7 @@ A made this list for all FOSS web services I found on the internet
 - [SlackJeff](https://libreddit.slackjeff.com.br)
 - [Whatever Social](https://discuss.whatever.social/)
 
-### NITTER - A Twitter front-end FOSS alternative
+### Nitter - A Twitter front-end FOSS alternative
 
 [🌐 Source](https://github.com/zedeus/nitter)
 
