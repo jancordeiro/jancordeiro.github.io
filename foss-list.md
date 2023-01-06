@@ -50,3 +50,13 @@ A made this list for all FOSS web services I found on the internet
 **List of instances**:
 
 - [Whatever Social](https://listen.whatever.social/)
+
+---
+
+|          | Description | Instances | Source |
+|----------|-------------|-----------|--------|
+| Libreddit| A front-end alternative to Reddit. | [List of Istances](https://github.com/libreddit/libreddit-instances/blob/master/instances.md) | [🌐](https://github.com/libreddit/libreddit) |
+| Nitter | A front-end alternative to Twitter | [List of Instances](#) | [🌐](#) |
+| Invidious | A front-end alternative to YouTube | [List of Instances](#) | [🌐](#) |
+| Piped | Another front-end alternative to YouTube | [List of Instances](#) | [🌐](#) |
+| Hyperpipe | A front-end alternative to YouTube Music | [List of Instances](#) | [🌐](#) |
