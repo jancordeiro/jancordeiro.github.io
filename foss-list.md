@@ -14,7 +14,7 @@ A made this list for all FOSS web services I found on the internet
 
 _This list above will be update soon as I found more FOSS web services._
 
-<table>
+<table border="0">
   <tr>
     <th>Coluna 1</th>
     <th>Coluna 2</th>
