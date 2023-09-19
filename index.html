@@ -4,28 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Cordeiro - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Inclua os links para os arquivos CSS e JavaScript do Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        /* Estilos para o modo claro */
-        body.light-mode {
-            background-color: white;
-            color: black;
-        }
-
-        /* Estilos para o modo escuro */
-        body.dark-mode {
-            background-color: #333;
-            color: white;
-        }
-
-	#mode-toggle {
-	    margin-left: 5px;
-	}
-    </style>
 </head>
 <body class="light-mode"> 
 <!-- INICIO DO NAVBAR -->
@@ -61,34 +46,18 @@
         </div>
 
         <!-- Botão para Alternar entre Modo Claro e Modo Escuro -->
-        <button id="mode-toggle" class="btn btn-secondary">
-            <img src="dark.svg" width="26px" alt="Modo Escuro">
+        <button id="mode-toggle" class="btn btn-dark">
+            <i class="fa-solid fa-moon"></i>
         </button>
     </div>
 </nav>
 
-<script>
-    // Capturar o botão de alternância de modo
-    const modeToggle = document.getElementById('mode-toggle');
+<div class="container-fluid">
+    <h1>Titulo Destacado</h1>
+    <p>Tagline goes here...</p>
+</div>
 
-    // Adicionar um ouvinte de evento para alternar entre os modos
-    modeToggle.addEventListener('click', function () {
-        const body = document.body;
-
-        // Verificar qual modo está atualmente ativado
-        if (body.classList.contains('light-mode')) {
-            // Se o modo claro estiver ativado, mude para o modo escuro
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-            modeToggle.innerHTML = '<img src="light.svg" width="26px" alt="Modo Claro">';
-        } else {
-            // Se o modo escuro estiver ativado, mude para o modo claro
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
-            modeToggle.innerHTML = '<img src="dark.svg" width="26px" alt="Modo Escuro">';
-        }
-    });
-</script>
-
+<script src="script.js"></script>
+<noscript>Allow your Javascript for eneable some functions on this website.</noscript>
 </body>
 </html>
