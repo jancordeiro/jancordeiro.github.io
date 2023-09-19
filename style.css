@@ -1,0 +1,23 @@
+/* Estilos para o modo claro */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+#mode-toggle {
+  margin-left: 5px;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 85vh;
+}
