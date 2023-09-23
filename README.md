@@ -1,3 +1,3 @@
-# :man_technologist: Jan Cordeiro | Web Developer
+# :man_technologist: Jan Cordeiro  
 
 This repository is for my personal and portfolio page on GitHub
