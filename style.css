@@ -4,10 +4,6 @@ body.light-mode {
   color: black;
 }
 
-.bg-escuro {
-	background-color: black;
-}
-
 /* Estilos para o modo escuro */
 body.dark-mode {
   background-color: #333;
