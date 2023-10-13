@@ -1,9 +1,9 @@
 const modeToggle = document.getElementById('mode-toggle');
 const nav = document.getElementById('navbar');
+const body = document.body;
 
 // Escuta um evento ou clique para iniciar a função
 modeToggle.addEventListener('click', function () {
-const body = document.body;
 
 // Verificar qual modo está atualmente ativado
 if (body.classList.contains('light-mode')) {
