@@ -1,6 +1,6 @@
 # FOSS Web Services Alternatives
 
-A made this list for all FOSS web services I found on the internet
+I made this list for all FOSS web services I found on the internet
 
 |          | Description | Instances | Source |
 |----------|-------------|-----------|--------|
