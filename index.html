@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Jan Cordeiro - Web Developer</title>
+		<title>Jan Cordeiro </> Web Developer</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -12,33 +12,34 @@
 		<link rel="icon" href="favicon.png" type="image/x-icon">
 	</head>
 	<body class="bg-secondary-subtle">
-		<div class="container-expand-lg">
-			<nav class="navbar navbar-dark navbar-expand-lg bg-dark px-5" aria-label="navbar">
+		<div class="container-expand fixed-top">
+			<nav class="navbar navbar-dark navbar-expand-md bg-black bg-gradient px-3" aria-label="navbar">
 			  <div class="container-fluid">
-				<a class="navbar-brand col-lg-3 me-0" href="#"><i class="fa-solid fa-laptop-code fa-xl"></i> Jan Cordeiro</a>
+				<a class="navbar-brand col-lg-3 me-0" href="#"><i class="fa-solid fa-laptop-code fa-xl pe-2"></i>Jan Cordeiro</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+				<div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarsExample11">
 				  <ul class="navbar-nav col-lg-6 justify-content-lg-center">
 					<li class="nav-item">
 					  <a class="nav-link active" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link" href="#">About</a>
+					  <a class="nav-link" href="#about">About</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link" href="#">Portfolio</a>
+					  <a class="nav-link" href="#portfolio">Portfolio</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link" href="#">Contact</a>
+					  <a class="nav-link" href="#contact">Contact</a>
 					</li>
 				  </ul>
-				  <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-					<button class="btn btn-primary"><i class="bi bi-currency-bitcoin"></i> Donate</button>
-				  </div>
+				  
 				</div>
+					<div class="d-lg-flex col-lg-3 justify-content-lg-end">
+						<button class="btn btn-primary"><i class="bi bi-currency-bitcoin"></i> Donate</button>
+					</div>
 			  </div>
 			</nav>
 		</div>
@@ -50,8 +51,8 @@
 				<img src="imgs/jancordeiro.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
 			  </div>
 			  <div class="col-lg-6">
-				<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Web Developer</h1>
-				<p class="lead"><i class="bi bi-cup-hot-fill"></i> Hi there! I'm Jan Cordeiro and I developed some projects for <a class="link-primary link-underline-opacity-0" href="https://atonweb.xyz" target="_blank">Aton WEB</a> and some freelances jobs around there.</p>
+				<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi there!</h1>
+				<p class="lead"><i class="bi bi-cup-hot-fill"></i> I'm Jan Cordeiro and I developed some projects for <a class="link-primary link-underline-opacity-0" href="https://atonweb.xyz" target="_blank">Aton WEB</a> and some others freelance projects out there.</p>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
 				  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Skills</button>
 				  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Portfolio</button>
@@ -60,34 +61,80 @@
 			</div>
 		</div>
 		
-		<!-- My Skills Container -->
-		<div class="container-expand-lg bg-dark text-white">
+		<!-- About -->
+		<div class="container-expand-lg bg-secondary bg-gradient" id="about">
+			<div class="container d-flex justify-content-between py-5 px-4">
+				<div class="p-2">
+					<h2>About</h2>
+				</div>
+				<div class="p-2">
+					<img src="imgs/developer-man.png" class="img-fluid" width="350em" alt="developer man">
+				</div>
+			</div>
+		</div>
+		
+		<!-- My Skills -->
+		<div class="container-expand-lg bg-black bg-gradient text-light">
 		<div class="container px-4 py-5" id="featured-3">
-			<h2 class="pb-2 border-bottom">My Skills</h2>
-			<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+			<h2 class="pb-2">My Skills</h2>
+			<div class="row g-5 py-5 row-cols-1 row-cols-lg-3">
 			  <div class="feature col">
-				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded">
-				  <i class="bi bi-wordpress p-2"></i>
+				<div class="btn btn-primary fs-4 mb-3">
+				  <i class="bi bi-wordpress"></i>
 				</div>
-				<h3 class="fs-2 text-body-emphasis">WordPress</h3>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+				<h3 class="fs-2 text-light">Web Systems</h3>
+				<p>Website development for any purpose with the most used CMS system: WordPress. I also develop web system ondemand.</p>
 			  </div>
 			  <div class="feature col">
-				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded">
-				  <i class="fa-brands fa-php p-2"></i>
+				<div class="btn btn-primary fs-4 mb-3">
+				  <i class="fa-brands fa-php"></i>
 				</div>
-				<h3 class="fs-2 text-body-emphasis">PHP</h3>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+				<h3 class="fs-2 text-light">Back-end</h3>
+				<p>WordPress plugin development for specific cases or ondemand systems with PHP as backend language. I also write some Shell scripts for Linux distros.</p>
 			  </div>
 			  <div class="feature col">
-				<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 rounded">
-				  <i class="bi bi-terminal p-2"></i>
+				<div class="btn btn-primary fs-4 mb-3">
+				  <i class="fa-brands fa-html5"></i>
 				</div>
-				<h3 class="fs-2 text-body-emphasis">Shell</h3>
-				<p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+				<h3 class="fs-2 text-light">Front-end</h3>
+				<p>Website and web systems design made with HTML5, CSS3, JS and Bootstrap framework.</p>
 			  </div>
 			</div>
 		</div>
+		</div>
+		
+		<!-- Portfolio -->
+		<div class="container-fluid" id="portfolio">
+			<div class="container">
+				
+			</div>
+		</div>
+		
+		<!-- Contact -->
+		<div class="container-fluid" id="contact">
+			<div class="container">
+				
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div class="container">
+		  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<div class="col-md-4 d-flex align-items-center">
+			  <a href="#" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+				<i class="fa-solid fa-laptop-code fa-xl"></i>
+			  </a>
+			  <span class="mb-3 mb-md-0 text-body-secondary">Jan Cordeiro | Web Developer - 2024</span>
+			</div>
+			<div>
+				<span class="mb-3 mb-md-0 text-body-secondary">Made with Bootstrap 5.3</span>
+			</div>
+			<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			  <li class="ms-3"><a class="text-body-secondary" href="https://x.com/jancordev" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+			  <li class="ms-3"><a class="text-body-secondary" href="https://youtube.com/@jancordeiro" target="_blank"><i class="bi bi-youtube"></i></a></li>
+			  <li class="ms-3"><a class="text-body-secondary" href="https://github.com/jancordeiro" target="_blank"><i class="bi bi-github"></i></a></li>
+			</ul>
+		  </footer>
 		</div>
 		
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
