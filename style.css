@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --bg-color: #0a0a0a;
+    --text-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #00ff00;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#boot-text {
+    white-space: pre-wrap;
+    max-width: 800px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--neon-pink);
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--neon-pink);
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: radial-gradient(circle, #111, #000);
+}
+
+#hero .glitch {
+    position: relative;
+    color: var(--neon-pink);
+    font-weight: bold;
+}
+
+#hero .glitch::before,
+#hero .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: var(--neon-blue);
+    clip: rect(0, 0, 0, 0);
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        clip: rect(0, 9999px, 0, 0);
+    }
+    20% {
+        clip: rect(10px, 9999px, 30px, 0);
+    }
+    40% {
+        clip: rect(5px, 9999px, 15px, 0);
+    }
+    60% {
+        clip: rect(15px, 9999px, 25px, 0);
+    }
+    80% {
+        clip: rect(2px, 9999px, 12px, 0);
+    }
+    100% {
+        clip: rect(0, 9999px, 0, 0);
+    }
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--neon-pink);
+    margin-bottom: 2rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    border: 1px solid var(--neon-blue);
+    padding: 1rem;
+    background: #111;
+    box-shadow: 0 0 10px var(--neon-pink);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--neon-blue);
+}
+
+a:hover {
+    color: var(--neon-pink);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background-color: #111;
+    color: #888;
+}

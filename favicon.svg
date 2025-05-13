@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="black"/>
+
+  <!-- Red glitch layer -->
+  <text x="50%" y="50%" font-family="monospace" font-size="36" fill="red" text-anchor="middle" dominant-baseline="middle">
+    JC
+    <animateTransform attributeName="transform" type="translate" values="1,0; -1,0; 1,0" dur="0.2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3; 0.8; 0.3" dur="0.3s" repeatCount="indefinite" />
+  </text>
+
+  <!-- Blue glitch layer -->
+  <text x="50%" y="50%" font-family="monospace" font-size="36" fill="blue" text-anchor="middle" dominant-baseline="middle">
+    JC
+    <animateTransform attributeName="transform" type="translate" values="-1,0; 1,0; -1,0" dur="0.3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4; 0.9; 0.4" dur="0.4s" repeatCount="indefinite" />
+  </text>
+
+  <!-- Main neon layer -->
+  <text x="50%" y="50%" font-family="monospace" font-size="36" fill="#00ff00" text-anchor="middle" dominant-baseline="middle">
+    JC
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0.5,0; 0,0" dur="0.15s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1; 0.95; 1" dur="0.1s" repeatCount="indefinite" />
+  </text>
+</svg>
