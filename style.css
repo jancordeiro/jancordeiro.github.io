@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
+/* ----- variáveis globais tema dark/verde terminal ----- */
 :root {
-    --neon-pink: #ff00ff;
-    --neon-blue: #00ffff;
-    --bg-color: #0a0a0a;
-    --text-color: #f0f0f0;
+    --bg-terminal: #0b0e0a;
+    --bg-card: #131a13;
+    --bg-input: #1c261c;
+    --border-terminal: #2b4a2b;
+    --text-primary: #b7e0b7;
+    --text-secondary: #8cb88c;
+    --text-muted: #5f7f5f;
+    --accent-verde: #3fcf6a;
+    --accent-glow: rgba(63, 207, 106, 0.25);
+    --font-mono: 'Courier New', Courier, 'Fira Code', monospace;
+    --shadow-terminal: 0 8px 28px rgba(0, 20, 0, 0.8);
 }
 
 * {
@@ -13,150 +19,268 @@
     box-sizing: border-box;
 }
 
-#boot-screen {
+body {
+    background-color: var(--bg-terminal);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    background-image: radial-gradient(circle at 20% 30%, #0f1a0f 0%, #060906 100%);
+    border-top: 2px solid var(--border-terminal);
+    border-bottom: 2px solid var(--border-terminal);
+    box-shadow: inset 0 0 60px rgba(0, 30, 0, 0.5);
+}
+
+/* efeito scanline sutil */
+body::after {
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
-    color: #00ff00;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    padding: 2rem;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0, 20, 0, 0.03) 0px, rgba(0, 40, 0, 0.03) 2px, transparent 4px, transparent 6px);
+    z-index: 999;
+}
+
+/* containers e cards com estilo terminal */
+.terminal-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.terminal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-terminal);
+    border-radius: 18px;
+    padding: 2rem 2rem 2.5rem;
+    box-shadow: var(--shadow-terminal), inset 0 0 30px rgba(0, 30, 0, 0.4);
+    backdrop-filter: blur(1px);
+    transition: border 0.2s ease, box-shadow 0.3s ease;
+}
+
+.terminal-card:hover {
+    border-color: var(--accent-verde);
+    box-shadow: var(--shadow-terminal), 0 0 25px var(--accent-glow);
+}
+
+/* cabeçalho com cursor piscante */
+.terminal-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 9999;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--border-terminal);
+    padding-bottom: 0.9rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
 }
 
-#boot-text {
-    white-space: pre-wrap;
-    max-width: 800px;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Share Tech Mono', monospace;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-}
-
-header {
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    color: var(--neon-pink);
-    font-size: 1.2rem;
-}
-
-nav ul {
+.terminal-header .dots {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 8px;
+    margin-right: 10px;
+}
+.terminal-header .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #2d3e2d;
+    border: 1px solid #3d5a3d;
+}
+.terminal-header .dot.red { background: #4f3a3a; border-color: #6b4747; }
+.terminal-header .dot.yellow { background: #4f4a2e; border-color: #6b632e; }
+.terminal-header .dot.green { background: #2e4f2e; border-color: #3d6b3d; }
+
+.terminal-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    background: rgba(0, 30, 0, 0.3);
+    padding: 0.25rem 1rem;
+    border-radius: 40px;
+    border: 1px solid var(--border-terminal);
+    font-family: var(--font-mono);
 }
 
-nav a {
-    color: var(--neon-blue);
-    text-decoration: none;
-    transition: color 0.3s;
+.terminal-title i {
+    color: var(--accent-verde);
+    margin-right: 6px;
 }
 
-nav a:hover {
-    color: var(--neon-pink);
+.cursor-blink {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: var(--accent-verde);
+    margin-left: 4px;
+    animation: blink 1.1s step-end infinite;
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-glow);
 }
 
-#hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: radial-gradient(circle, #111, #000);
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-#hero .glitch {
-    position: relative;
-    color: var(--neon-pink);
-    font-weight: bold;
+/* tipografia */
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
-#hero .glitch::before,
-#hero .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    color: var(--neon-blue);
-    clip: rect(0, 0, 0, 0);
-    animation: glitch 2s infinite;
+.display-6 {
+    font-size: 1.7rem;
+    color: var(--text-primary);
+    border-left: 3px solid var(--accent-verde);
+    padding-left: 0.9rem;
 }
 
-@keyframes glitch {
-    0% {
-        clip: rect(0, 9999px, 0, 0);
-    }
-    20% {
-        clip: rect(10px, 9999px, 30px, 0);
-    }
-    40% {
-        clip: rect(5px, 9999px, 15px, 0);
-    }
-    60% {
-        clip: rect(15px, 9999px, 25px, 0);
-    }
-    80% {
-        clip: rect(2px, 9999px, 12px, 0);
-    }
-    100% {
-        clip: rect(0, 9999px, 0, 0);
-    }
+.lead {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
 }
 
-section {
-    padding: 4rem 2rem;
+.text-green-glow {
+    color: var(--accent-verde);
+    text-shadow: 0 0 12px var(--accent-glow);
 }
 
-h3 {
-    text-align: center;
-    color: var(--neon-pink);
-    margin-bottom: 2rem;
+.text-muted-terminal {
+    color: var(--text-muted);
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.project {
-    border: 1px solid var(--neon-blue);
-    padding: 1rem;
-    background: #111;
-    box-shadow: 0 0 10px var(--neon-pink);
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-a {
-    color: var(--neon-blue);
-}
-
-a:hover {
-    color: var(--neon-pink);
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
+/* badges estilo terminal */
+.badge-terminal {
+    background: rgba(30, 60, 30, 0.5);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-terminal);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 400;
     font-size: 0.9rem;
-    background-color: #111;
-    color: #888;
+    font-family: var(--font-mono);
+    transition: 0.2s;
+}
+.badge-terminal i {
+    color: var(--accent-verde);
+    margin-right: 6px;
+}
+.badge-terminal:hover {
+    background: #1f321f;
+    border-color: var(--accent-verde);
+    color: #d4f0d4;
+}
+
+/* botões */
+.btn-terminal {
+    background: transparent;
+    color: var(--accent-verde);
+    border: 1px solid var(--accent-verde);
+    border-radius: 40px;
+    padding: 0.6rem 1.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+    box-shadow: 0 0 6px rgba(63, 207, 106, 0.1);
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+.btn-terminal:hover {
+    background: var(--accent-verde);
+    color: #0b0e0a;
+    box-shadow: 0 0 22px var(--accent-glow);
+    border-color: var(--accent-verde);
+    transform: scale(1.01);
+}
+.btn-terminal-outline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-terminal);
+    border-radius: 40px;
+    padding: 0.6rem 1.8rem;
+    font-family: var(--font-mono);
+    transition: 0.2s;
+}
+.btn-terminal-outline:hover {
+    border-color: var(--accent-verde);
+    color: var(--accent-verde);
+    background: rgba(63, 207, 106, 0.05);
+    box-shadow: 0 0 14px rgba(63, 207, 106, 0.15);
+}
+
+/* inputs estilo terminal */
+.form-control-terminal {
+    background: var(--bg-input);
+    border: 1px solid var(--border-terminal);
+    color: var(--text-primary);
+    border-radius: 40px;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    transition: 0.25s;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+}
+.form-control-terminal:focus {
+    background: #1b2a1b;
+    border-color: var(--accent-verde);
+    color: #e0f0e0;
+    box-shadow: 0 0 20px var(--accent-glow), inset 0 0 8px #1f3f1f;
+    outline: none;
+}
+.form-control-terminal::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+/* ícones e listas */
+.icon-list li {
+    list-style: none;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px dashed rgba(43, 74, 43, 0.3);
+    padding-bottom: 0.7rem;
+    color: var(--text-secondary);
+}
+.icon-list li i {
+    width: 28px;
+    color: var(--accent-verde);
+    text-shadow: 0 0 6px var(--accent-glow);
+}
+
+.social-icon {
+    color: var(--text-muted);
+    font-size: 1.7rem;
+    transition: 0.2s;
+    display: inline-block;
+    padding: 0.3rem;
+}
+.social-icon:hover {
+    color: var(--accent-verde);
+    text-shadow: 0 0 16px var(--accent-glow);
+    transform: translateY(-3px);
+}
+
+/* linha separadora */
+.hr-terminal {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-terminal), var(--accent-verde), var(--border-terminal), transparent);
+    margin: 1.8rem 0;
+    opacity: 0.5;
+}
+
+/* responsividade */
+@media (max-width: 576px) {
+    .terminal-card {
+    padding: 1.5rem;
+    }
+    .display-6 {
+    font-size: 1.3rem;
+    }
 }
