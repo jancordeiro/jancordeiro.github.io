@@ -9,7 +9,7 @@
     --text-muted: #5f7f5f;
     --accent-verde: #3fcf6a;
     --accent-glow: rgba(63, 207, 106, 0.25);
-    --font-mono: 'Courier New', Courier, 'Fira Code', monospace;
+    --font-mono: "Courier New", Courier, "Fira Code", monospace;
     --shadow-terminal: 0 8px 28px rgba(0, 20, 0, 0.8);
 }
 
@@ -35,14 +35,20 @@ body {
 
 /* efeito scanline sutil */
 body::after {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: repeating-linear-gradient(0deg, rgba(0, 20, 0, 0.03) 0px, rgba(0, 40, 0, 0.03) 2px, transparent 4px, transparent 6px);
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 20, 0, 0.03) 0px,
+        rgba(0, 40, 0, 0.03) 2px,
+        transparent 4px,
+        transparent 6px
+    );
     z-index: 999;
 }
 
@@ -58,14 +64,20 @@ body::after {
     border: 1px solid var(--border-terminal);
     border-radius: 18px;
     padding: 2rem 2rem 2.5rem;
-    box-shadow: var(--shadow-terminal), inset 0 0 30px rgba(0, 30, 0, 0.4);
+    box-shadow:
+        var(--shadow-terminal),
+        inset 0 0 30px rgba(0, 30, 0, 0.4);
     backdrop-filter: blur(1px);
-    transition: border 0.2s ease, box-shadow 0.3s ease;
+    transition:
+        border 0.2s ease,
+        box-shadow 0.3s ease;
 }
 
 .terminal-card:hover {
     border-color: var(--accent-verde);
-    box-shadow: var(--shadow-terminal), 0 0 25px var(--accent-glow);
+    box-shadow:
+        var(--shadow-terminal),
+        0 0 25px var(--accent-glow);
 }
 
 /* cabeçalho com cursor piscante */
@@ -91,9 +103,18 @@ body::after {
     background: #2d3e2d;
     border: 1px solid #3d5a3d;
 }
-.terminal-header .dot.red { background: #4f3a3a; border-color: #6b4747; }
-.terminal-header .dot.yellow { background: #4f4a2e; border-color: #6b632e; }
-.terminal-header .dot.green { background: #2e4f2e; border-color: #3d6b3d; }
+.terminal-header .dot.red {
+    background: #4f3a3a;
+    border-color: #6b4747;
+}
+.terminal-header .dot.yellow {
+    background: #4f4a2e;
+    border-color: #6b632e;
+}
+.terminal-header .dot.green {
+    background: #2e4f2e;
+    border-color: #3d6b3d;
+}
 
 .terminal-title {
     font-size: 1.2rem;
@@ -124,12 +145,22 @@ body::after {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* tipografia */
-h1, h2, h3, .h1, .h2, .h3 {
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
     font-family: var(--font-mono);
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -225,13 +256,15 @@ h1, h2, h3, .h1, .h2, .h3 {
     font-family: var(--font-mono);
     font-size: 0.95rem;
     transition: 0.25s;
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 .form-control-terminal:focus {
     background: #1b2a1b;
     border-color: var(--accent-verde);
     color: #e0f0e0;
-    box-shadow: 0 0 20px var(--accent-glow), inset 0 0 8px #1f3f1f;
+    box-shadow:
+        0 0 20px var(--accent-glow),
+        inset 0 0 8px #1f3f1f;
     outline: none;
 }
 .form-control-terminal::placeholder {
@@ -270,7 +303,14 @@ h1, h2, h3, .h1, .h2, .h3 {
 .hr-terminal {
     border: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-terminal), var(--accent-verde), var(--border-terminal), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-terminal),
+        var(--accent-verde),
+        var(--border-terminal),
+        transparent
+    );
     margin: 1.8rem 0;
     opacity: 0.5;
 }
@@ -278,9 +318,9 @@ h1, h2, h3, .h1, .h2, .h3 {
 /* responsividade */
 @media (max-width: 576px) {
     .terminal-card {
-    padding: 1.5rem;
+        padding: 1.5rem;
     }
     .display-6 {
-    font-size: 1.3rem;
+        font-size: 1.3rem;
     }
 }
