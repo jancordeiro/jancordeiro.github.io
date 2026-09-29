@@ -1,185 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jan Cordeiro · Frontend Developer</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan Cordeiro · Criação de Sites de Alta Conversão</title>
 
-        <!-- ===== SEO & Open Graph ===== -->
-        <meta name="description" content="Portfólio e landing page de desenvolvedor frontend especializado em landing pages, sites institucionais e WordPress. Tema dark/verde estilo terminal." />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Jan Cordeiro" />
-        <meta name="keywords" content="desenvolvedor frontend, landing pages, sites institucionais, wordpress, php, html, css, javascript, git, cloudflare" />
-        <link rel="canonical" href="https://jancordeiro.github.io/" />
+    <!-- ===== SEO & Open Graph ===== -->
+    <meta name="description" content="Criação de landing pages, sites institucionais e lojas virtuais de alta conversão. Especialista em WordPress." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Jan Cordeiro" />
+    <meta name="keywords" content="criação de sites, landing page, site institucional, loja virtual, wordpress, php, mysql, javascript, bootstrap, cloudflare" />
+    <link rel="canonical" href="https://jancordeiro.github.io/" />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://jancordeiro.github.io/" />
-        <meta property="og:title" content="Jan Cordeiro · Frontend Developer" />
-        <meta property="og:description" content="Landing page estilo terminal com tema dark/verde. Desenvolvedor frontend especializado em criação de sites de alta conversão." />
-        <meta property="og:image" content="https://jancordeiro.github.io/og.webp" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Jan Cordeiro" />
-        <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jancordeiro.github.io/" />
+    <meta property="og:title" content="Jan Cordeiro · Criação de Sites de Alta Conversão" />
+    <meta property="og:description" content="Landing pages, sites institucionais e lojas virtuais feitas para converter." />
+    <meta property="og:image" content="https://jancordeiro.github.io/jc-og.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Jan Cordeiro" />
+    <meta property="og:locale" content="pt_BR" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://jancordeiro.github.io/" />
-        <meta name="twitter:title" content="Jan Cordeiro · Frontend Developer" />
-        <meta name="twitter:description" content="Landing page estilo terminal com tema dark/verde. Desenvolvedor frontend especializado em criação de sites de alta conversão." />
-        <meta name="twitter:image" content="https://jancordeiro.github.io/og.webp" />
-        <meta name="twitter:creator" content="@jancordev" />
-        <!-- ===== Fim SEO ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jan Cordeiro · Criação de Sites de Alta Conversão" />
+    <meta name="twitter:description" content="Landing pages, sites institucionais e lojas virtuais feitas para converter." />
+    <meta name="twitter:image" content="https://jancordeiro.github.io/jc-og.webp" />
 
-        <!-- Bootstrap 5.3 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <!-- Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-        <!-- Font Awesome 6 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <!-- Custom CSS -->
-		<link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="terminal-container">
-            <div class="terminal-card">
-                <!-- header -->
-                <div class="terminal-header">
-                    <div class="dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="terminal-title">
-                        <i class="bi bi-terminal-fill"></i> dev@landing:~<span class="cursor-blink"></span>
-                    </span>
-                    <span class="ms-auto text-muted-terminal" style="font-size: 0.8rem; letter-spacing: 1px">
-                        <i class="bi bi-github"></i> pages
-                    </span>
-                </div>
-
-                <!-- conteúdo principal -->
-                <div class="row g-4 align-items-center">
-                    <!-- coluna esquerda: info -->
-                    <div class="col-lg-7">
-                        <h1 class="display-6 mb-3">
-                            <span class="text-green-glow">$ whoami</span>
-                            <span style="color: var(--text-primary)">jan cordeiro</span>
-                        </h1>
-                        <p class="lead mb-3">
-                            <i class="bi bi-chevron-right text-green-glow"></i>
-                            &lt; desenvolvedor frontend &gt;
-                        </p>
-                        <p class="text-muted-terminal" style="font-size: 1rem; max-width: 90%">
-                            <i class="bi bi-dash-lg text-green-glow"></i>
-                            especialista em landing pages, sites institucionais e WordPress. Transformo ideias em
-                            experiências digitais que convertem.
-                        </p>
-
-                        <!-- badges / skills -->
-                        <div class="d-flex flex-wrap gap-2 my-4">
-                            <span class="badge-terminal"><i class="fab fa-wordpress"></i> WordPress</span>
-                            <span class="badge-terminal"><i class="fab fa-html5"></i> HTML</span>
-                            <span class="badge-terminal"><i class="fab fa-css3-alt"></i> CSS</span>
-                            <span class="badge-terminal"><i class="fab fa-js"></i> Javascript</span>
-                            <span class="badge-terminal"><i class="fab fa-git-alt"></i> GIT</span>
-                            <span class="badge-terminal"><i class="fas fa-cloud"></i> Cloudflare</span>
-                        </div>
-
-                        <!-- call to action -->
-                        <div class="d-flex flex-wrap gap-3 mt-3">
-                            <a href="#" class="btn btn-terminal"><i class="bi bi-envelope-paper"></i> contato</a>
-                            <a href="https://atonweb.xyz/#portfolio" class="btn btn-terminal-outline" target="_blank"><i class="bi bi-github"></i> portfolio</a>
-                        </div>
-                    </div>
-
-                    <!-- coluna direita: contato / status -->
-                    <div class="col-lg-5">
-                        <div
-                            style="
-                                background: #0f160f;
-                                border-radius: 24px;
-                                padding: 1.5rem 1.2rem;
-                                border: 1px solid var(--border-terminal);
-                            ">
-                            <div class="d-flex align-items-center gap-2 mb-3">
-                                <i class="bi bi-circle-fill" style="color: var(--accent-verde); font-size: 0.7rem"></i>
-                                <span style="color: var(--text-secondary); font-size: 0.9rem">status: disponível</span>
-                                <span class="ms-auto text-muted-terminal" style="font-size: 0.75rem"
-                                    ><i class="bi bi-wifi"></i> online</span
-                                >
-                            </div>
-                            <ul class="icon-list ps-0 mb-0">
-                                <li><i class="bi bi-envelope"></i> jancordeiro@protonmail.com</li>
-                                <li><i class="bi bi-geo-alt"></i> brasil · remote</li>
-                                <li><i class="bi bi-clock"></i> /usr/bin/frontend</li>
-                            </ul>
-                            <hr class="hr-terminal my-3" />
-                            <div class="d-flex justify-content-around">
-                                <a href="https://github.com/jancordeiro" class="social-icon"><i class="bi bi-github"></i></a>
-                                <a href="https://youtube.com/@jancordeiro" class="social-icon"><i class="bi bi-youtube"></i></a>
-                                <a href="https://instagram.com/atonweb.xyz" class="social-icon"><i class="bi bi-instagram"></i></a>
-                                <a href="https://x.com/jancordev" class="social-icon"><i class="bi bi-twitter-x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- linha separadora com prompt -->
-                <hr class="hr-terminal" />
-
-                <!-- rodapé / área criativa (sem captura de email) -->
-                <div class="row g-3 align-items-end">
-                    <div class="col-md-8">
-                        <label
-                            for="terminalMessage"
-                            class="form-label text-muted-terminal"
-                            style="font-size: 0.8rem; letter-spacing: 1px">
-                            <i class="bi bi-terminal"></i> $ echo "fale comigo"
-                        </label>
-                        <div class="input-group">
-                            <input
-                                type="text"
-                                class="form-control form-control-terminal"
-                                id="terminalMessage"
-                                placeholder="./mensagem --para=jan"
-                                value="./mensagem --para=jan"
-                                readonly
-                                style="cursor: default; opacity: 0.85" />
-                            <button
-                                class="btn btn-terminal"
-                                type="button"
-                                style="border-radius: 40px; padding: 0.6rem 1.8rem; margin-left: 8px"
-                                onclick="alert('🚀 Vamos conversar! Envie um email para jan@criativoweb.dev')">
-                                <i class="bi bi-send"></i> executar
-                            </button>
-                        </div>
-                        <small class="text-muted-terminal d-block mt-2" style="font-size: 0.75rem">
-                            <i class="bi bi-info-circle"></i> comando simbólico — apenas para demonstrar interação
-                        </small>
-                    </div>
-                    <div class="col-md-4 text-md-end text-muted-terminal" style="font-size: 0.85rem">
-                        <i class="bi bi-shield-check text-green-glow"></i> ~ v1.0
-                        <span class="d-block d-md-inline-block mt-1 mt-md-0">
-                            <i class="bi bi-dot"></i>
-                            <span class="cursor-blink" style="width: 8px; height: 16px; display: inline-block"></span>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- linha extra com mensagem final -->
-                <div
-                    class="mt-4 pt-2 text-center text-muted-terminal border-top border-secondary border-opacity-10"
-                    style="font-size: 0.75rem; letter-spacing: 0.3px">
-                    <i class="bi bi-lock-fill text-green-glow me-1"></i>
-                    ~/dev/landing · 2026 · criado com
-                    <i class="bi bi-heart-fill" style="color: var(--accent-verde)"></i> & <i class="bi bi-cup-hot"></i>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Custom CSS & Favicon-->
+    <link rel="stylesheet" href="site.css" />
+    <link rel="icon" type="image/x-icon" href="command.png">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-terminal fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#top">
+                <span class="brand-prompt">~/</span>jan-cordeiro<span class="brand-cursor"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-accent btn-sm" href="https://wa.me/554299501519" target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp me-1"></i> Orçamento
+                    </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ===== HERO ===== -->
+    <header class="hero-section" id="top">
+        <div class="container">
+            <div class="text-center">
+                <span class="hero-eyebrow">
+                    <span class="dot"></span> disponível para novos projetos
+                </span>
+                <h1 class="hero-title">
+                    Sites que <span class="accent">convertem</span><br />
+                    visitantes em clientes.
+                </h1>
+                <p class="hero-subtitle mx-auto">
+                    Sou Jan Cordeiro, desenvolvedor web especializado em criar landing pages,
+                    sites institucionais e lojas virtuais de alta performance.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#portfolio" class="btn btn-accent">
+                        <i class="bi bi-grid-3x3-gap me-1"></i> Ver portfólio
+                    </a>
+                    <a href="#contato" class="btn btn-outline-accent">
+                        <i class="bi bi-chat-dots me-1"></i> Solicitar orçamento
+                    </a>
                 </div>
             </div>
-            <!-- /terminal-card -->
+            <!-- Cards de serviços -->
+            <div class="row g-4 mt-5" id="servicos">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                    <h5>Landing Pages</h5>
+                    <p>Páginas focadas em conversão, com copy estratégica, design persuasivo e carregamento ultrarrápido.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-building"></i></div>
+                    <h5>Sites Institucionais</h5>
+                    <p>Presença digital profissional para sua empresa, com estrutura clara, SEO otimizado e visual moderno.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <div class="service-icon"><i class="bi bi-cart3"></i></div>
+                    <h5>Lojas Virtuais</h5>
+                    <p>E-commerces completos, integrados a meios de pagamento, com foco em experiência de compra e vendas.</p>
+                </div>
+            </div>
+            </div>
         </div>
-        <!-- /terminal-container -->
+    </header>
+    <!-- ===== TECNOLOGIAS ===== -->
+    <section class="tech-strip">
+        <div class="container">
+            <p class="tech-label">// tecnologias que trabalho</p>
+            <div class="tech-logos">
+                <div class="tech-item"><i class="fab fa-wordpress"></i> WordPress</div>
+                <div class="tech-item"><i class="fas fa-cloud"></i> Cloudflare</div>
+                <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+                <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+                <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="tech-item"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== PORTFÓLIO ===== -->
+    <section class="section section-alt" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// portfólio</span>
+                <h2 class="section-title">Ultimos projetos</h2>
+                <p class="section-desc">Uma seleção de sites que desenvolvi para clientes de diferentes segmentos.</p>
+            </div>
+            <!-- Filtros -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="wordpress">WordPress</button>
+                <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="filter-btn" data-filter="institucional">Institucionais</button>
+            </div>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+            <div class="row g-4" id="portfolioGrid">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="landing">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-1"><i class="bi bi-rocket-takeoff"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">Landing Page</span>
+                        <h5>Curso de Marketing Digital</h5>
+                        <p>Página de captura com integração a CRM e taxa de conversão de 32%.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="institucional">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-2"><i class="bi bi-briefcase"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">Site Institucional</span>
+                        <h5>Escritório de Advocacia</h5>
+                        <p>Site profissional com blog, área de atuação e formulário de contato.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="wordpress">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-3"><i class="fab fa-wordpress"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">WordPress</span>
+                        <h5>Clínica de Estética</h5>
+                        <p>Site em WordPress com agendamento online e galeria de procedimentos.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="landing">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-4"><i class="bi bi-bullseye"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">Landing Page</span>
+                        <h5>Lançamento de Infoproduto</h5>
+                        <p>Página de vendas com escassez, prova social e checkout integrado.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="wordpress">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-5"><i class="bi bi-shop"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">WordPress · WooCommerce</span>
+                        <h5>Loja de Roupas</h5>
+                        <p>E-commerce completo com variações de produto e cálculo de frete.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="institucional">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb thumb-6"><i class="bi bi-building-gear"></i></div>
+                    <div class="portfolio-body">
+                        <span class="portfolio-cat">Site Institucional</span>
+                        <h5>Construtora Regional</h5>
+                        <p>Portfólio de obras, apresentação da empresa e captação de leads.</p>
+                        <a href="#" class="portfolio-link">Ver projeto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== CONTATO / CTA ===== -->
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="section-header mb-4">
+                <span class="section-tag">// contato</span>
+                <h2 class="section-title">Vamos tirar seu projeto do papel?</h2>
+                <p class="section-desc">Fale comigo pelo WhatsApp ou pelas redes sociais e receba um orçamento personalizado.</p>
+            </div>
+            <div class="text-center">
+                <a href="https://wa.me/554299501519" target="_blank" rel="noopener" class="btn btn-accent btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i> Orçamento via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Sobre -->
+                <div class="col-md-4">
+                    <h6>~/jan-cordeiro</h6>
+                    <p class="footer-text">
+                    Desenvolvedor web especializado em criação de sites de alta conversão.
+                    Transformo ideias em experiências digitais.
+                    </p>
+                </div>
+                <!-- Formas de pagamento -->
+                <div class="col-md-4">
+                    <h6>Formas de pagamento</h6>
+                    <ul class="payment-list">
+                        <li><i class="fas fa-qrcode"></i> PIX</li>
+                        <li><i class="fas fa-credit-card"></i> Cartão de Crédito</li>
+                        <li><i class="fab fa-bitcoin"></i> Criptomoedas</li>
+                    </ul>
+                </div>
+                <!-- Redes sociais -->
+                <div class="col-md-4">
+                    <h6>Redes sociais</h6>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/atonweb.site" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/554299501519" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/jancordeiro" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <i class="bi bi-c-circle"></i> 2026 Jan Cordeiro · Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/554299501519" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Orçamento via WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+        <span class="wa-text">Orçamento via WhatsApp</span>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
 </html>
